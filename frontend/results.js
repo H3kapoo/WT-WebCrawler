@@ -6,8 +6,10 @@ const resultPopulator = new ResultPopulator()
 
 new Requestor().requestCrawlingForStoredConfig((results) => {
     resultPopulator.populateWithResults(results)
+
     const saveButton = document.getElementById('save-btn')
     saveButton.addEventListener('click', () => {
+        /*Make API call to backend to save the collected data*/
         alert('Save not implemented')
     })
 

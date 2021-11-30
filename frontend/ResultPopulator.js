@@ -6,6 +6,16 @@ class ResultPopulator {
 
         const mainContainerDOM = document.getElementsByClassName('main-container')[0]
 
+        /* Handle display error is URL link not found or smth */
+
+        if (results.timeoutLink) {
+            alert(`Crawler timeout when trying link: ${results.timeoutLink}`)
+            this.hideWaitingNotification()
+            return
+        }
+
+        let resultCount = 0
+
         for (const res of results) {
             const matchInfoDOM = document.createElement('div')
             matchInfoDOM.className = 'match-info'
@@ -53,6 +63,8 @@ class ResultPopulator {
             matchInfoCntValueDOM.id = 'match-info-count-value'
             matchInfoCntValueDOM.textContent = res['times-matched']
 
+            resultCount += parseInt(res['times-matched'])
+
             matchInfoCntDOM.appendChild(matchInfoCntTextDOM)
             matchInfoCntDOM.appendChild(matchInfoCntValueDOM)
 
@@ -83,10 +95,10 @@ class ResultPopulator {
             mainContainerDOM.appendChild(matchInfoDOM)
         }
 
-        this.hideWaitingNotification()
+        this.hideWaitingNotification(resultCount)
     }
 
-    hideWaitingNotification() {
+    hideWaitingNotification(resultCount) {
 
         if (!this.beenTurnedOnAndOff) {
             const crawlerSearchingDOM = document.getElementById('crawler-searching-on')
@@ -94,6 +106,7 @@ class ResultPopulator {
 
             const matchesFoundDOM = document.getElementById('search-matches-text')
             matchesFoundDOM.className = 'on'
+            matchesFoundDOM.innerText = `Found ${resultCount} matches accross the below sites`
             this.beenTurnedOnAndOff = true
         }
     }

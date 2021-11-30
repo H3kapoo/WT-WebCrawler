@@ -1,9 +1,13 @@
 class FilterObject {
 
-    elemsOptList = ['a', 'h3', 'h2', 'h1']
+    elemsOptList = ['a', 'h3', 'h2', 'h1', 'div']
     predsOptList = ['having', 'not having']
-    attrsOptList = ['inside-text', 'href', 'name', 'id', 'class']
+    attrsOptList = ['text', 'href', 'name', 'id', 'class']
     localID = 0
+    selectElementDOM = null
+    prepicElementDOM = null
+    attrsElementDOM = null
+    inputElementDOM = null
 
     constructor(id) { this.createFilter(id) }
 
@@ -15,28 +19,28 @@ class FilterObject {
 
         this.localID = id
 
-        let selectElementDOM = document.createElement('select')
-        let prepicElementDOM = document.createElement('select')
-        let attrsElementDOM = document.createElement('select')
-        const inputElementDOM = document.createElement('input')
+        this.selectElementDOM = document.createElement('select')
+        this.prepicElementDOM = document.createElement('select')
+        this.attrsElementDOM = document.createElement('select')
+        this.inputElementDOM = document.createElement('input')
         const buttonElementDOM = document.createElement('button')
 
-        selectElementDOM.className = 'filter-option-element'
-        prepicElementDOM.className = 'filter-option-predicate'
-        attrsElementDOM.className = 'filter-option-attr'
-        inputElementDOM.id = 'filter-option-input'
+        this.selectElementDOM.className = 'filter-option-element'
+        this.prepicElementDOM.className = 'filter-option-predicate'
+        this.attrsElementDOM.className = 'filter-option-attr'
+        this.inputElementDOM.id = 'filter-option-input'
         buttonElementDOM.className = 'trash-option'
 
-        selectElementDOM = this.populateFilterOption(selectElementDOM, this.elemsOptList)
-        prepicElementDOM = this.populateFilterOption(prepicElementDOM, this.predsOptList)
-        attrsElementDOM = this.populateFilterOption(attrsElementDOM, this.attrsOptList)
-        inputElementDOM.placeholder = 'Filter input..'
+        this.selectElementDOM = this.populateFilterOption(this.selectElementDOM, this.elemsOptList)
+        this.prepicElementDOM = this.populateFilterOption(this.prepicElementDOM, this.predsOptList)
+        this.attrsElementDOM = this.populateFilterOption(this.attrsElementDOM, this.attrsOptList)
+        this.inputElementDOM.placeholder = 'Filter input..'
         buttonElementDOM.textContent = 'X'
 
-        filterOptionDOM.appendChild(selectElementDOM)
-        filterOptionDOM.appendChild(prepicElementDOM)
-        filterOptionDOM.appendChild(attrsElementDOM)
-        filterOptionDOM.appendChild(inputElementDOM)
+        filterOptionDOM.appendChild(this.selectElementDOM)
+        filterOptionDOM.appendChild(this.prepicElementDOM)
+        filterOptionDOM.appendChild(this.attrsElementDOM)
+        filterOptionDOM.appendChild(this.inputElementDOM)
         filterOptionDOM.appendChild(buttonElementDOM)
 
         mainContainerDOM.appendChild(filterOptionDOM)
@@ -61,8 +65,12 @@ class FilterObject {
     }
 
     getValues() {
+        const element = this.selectElementDOM.value
+        const predicate = this.prepicElementDOM.value
+        const attr = this.attrsElementDOM.value
+        const input = this.inputElementDOM.value
 
-        return { "pop": 3 }
+        return { element, predicate, attr, input }
     }
 }
 

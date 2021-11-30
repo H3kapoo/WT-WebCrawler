@@ -71,6 +71,7 @@
     justify-content: space-between;
     font-size: 1.2rem;
     margin: 5px 0px;
+    overflow: hidden;
 }
 
 .match-info-element{
@@ -78,6 +79,7 @@
     flex-direction: column;
     justify-content: space-between;
     font-size: 1.2rem;
+    overflow: hidden;
     margin: 5px 0px;
 }
 

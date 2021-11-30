@@ -1,27 +1,25 @@
+import * as axios from 'axios'
+
 class Requestor {
 
     requestCrawlingForStoredConfig(populateCallback) {
-        //this will make the axios GET request to the backend server
+        //this will make the axios POST request to the backend server
         const filtersValues = JSON.parse(window.localStorage.getItem("filters-values"))
         const options = JSON.parse(window.localStorage.getItem("opts-values"))
 
         this.populateOptsValues(options)
-        console.log(filtersValues, options)
 
-        //api trigger to backend for actual results based on filters
-        const returned = [{
-            'filter-matched': "'a' contains inside text 'ceva text'",
-            'link-matched': 'https://www.google.com',
-            'times-matched': '30',
-            'html-matched': [
-                "some HTML string here some HTML string here some HTML string here some HTML string here some HTML string here some HTML string here some",
-                "some HTML string here some HTML string here some HTML string here some HTML string here some HTML string here some HTML string here some",
-                "some HTML string here some HTML string here some HTML string here some HTML string here some HTML string here some HTML string here some"
-            ]
-        }
-        ]
-        // setInterval(() => populateCallback(returned), 5000)
-        populateCallback(returned)
+        /* Make request to backend to download the HTML of base url and compute
+           the result list based on max depth and filters from frontend */
+        axios.post('http://localhost:3000/compute',
+            {
+                data: {
+                    options, filtersValues
+                }
+            }
+        ).then((returned) => {
+            populateCallback(returned.data)
+        })
     }
 
     populateOptsValues(options) {

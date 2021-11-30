@@ -3,9 +3,6 @@ import FilterObject from "./FilterObject"
 class FilterContainer {
 
     filters = []
-    elemsOptList = ['a', 'h3', 'h2', 'h1']
-    predsOptList = ['having', 'not having']
-    attrsOptList = ['inside-text', 'href', 'name', 'id', 'class']
     idGiver = 0
 
     constructor() {
