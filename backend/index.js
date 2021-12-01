@@ -2,7 +2,9 @@ const express = require('express')
 const cors = require('cors')
 const cheerio = require('cheerio')
 const axios = require('axios')
+const { saveToDb, getLatestFromDb } = require('./mongoManager')
 const app = express()
+
 app.use(express.json())
 app.use(cors())
 
@@ -14,12 +16,25 @@ app.post('/compute', async (req, res) => {
 
     try {
         const returned = await crawl(startUrl, filters, maxDepth)
+
+        if (returned.length)
+            await saveToDb(returned)
+
         res.send(returned)
     } catch (ex) {
         // send back a timeout response and that the user should try again
-        console.log(ex.message);
         res.send({ 'timeoutLink': req.body.data.options.searchURL })
     }
+})
+
+app.get('/get-latest', async (req, res) => {
+    const thedata = await getLatestFromDb()
+    res.send(thedata)
+})
+
+app.post('/save', async (req, res) => {
+    const thedata = await saveToDb(req.body.data.results)
+    res.send(thedata)
 })
 
 async function crawl(startLink, filters, maxDepth) {
@@ -46,7 +61,6 @@ async function crawl(startLink, filters, maxDepth) {
         const $ = cheerio.load(response.data)
 
         const returned = crawlLink(link, $, filters)
-
         for (el of getAnchorsFromLink(startLink, $))
             links.push(el)
 
@@ -112,7 +126,7 @@ function extractFromFilter(searchLink, pageData, filter) {
     const result = {
         'filter-matched': `${elementDOM} ${predicate} ${attr} ${input}`,
         'link-matched': `${searchLink}`,
-        'times-matched': `${elements.length}`,
+        'times-matched': elements.length,
         'html-matched': htmlList
     }
 

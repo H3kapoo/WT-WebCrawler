@@ -1,0 +1,105 @@
+{
+    "_id": "61a76fce5634e8b9253e8821",
+    "data": [
+        {
+            "filter-matched": "div having class container",
+            "link-matched": "https://www.altex.ro",
+            "times-matched": 3,
+            "html-matched": [
+                "<div class=\"container\"><a href=\"https://www.altextravel.ro/\" class=\"block mr-0 mb-3 md:mb-0\" title=\"...",
+                "<div class=\"container\"><div class=\"flex flex-wrap items-start lg:items-center py-4 lg:py-7\"><div cla...",
+                "<div class=\"container\"><div class=\"Footer-label lg:flex -mx-15px lg:-mx-2 lg:pt-12 lg:mt-1 lg:pb-37p..."
+            ]
+        },
+        {
+            "filter-matched": "div having class container",
+            "link-matched": "https://www.altex.ro/home/",
+            "times-matched": 3,
+            "html-matched": [
+                "<div class=\"container\"><a href=\"https://www.altextravel.ro/\" class=\"block mr-0 mb-3 md:mb-0\" title=\"...",
+                "<div class=\"container\"><div class=\"flex flex-wrap items-start lg:items-center py-4 lg:py-7\"><div cla...",
+                "<div class=\"container\"><div class=\"Footer-label lg:flex -mx-15px lg:-mx-2 lg:pt-12 lg:mt-1 lg:pb-37p..."
+            ]
+        },
+        {
+            "filter-matched": "div having class container",
+            "link-matched": "https://altex.ro/cos-cumparaturi/",
+            "times-matched": 3,
+            "html-matched": [
+                "<div class=\"container\"><main class=\"clearfix\"><div class=\"jsx-3482871639 loading u-space-mb-30\"><div...",
+                "<div class=\"container\"><div class=\"flex flex-wrap items-start lg:items-center py-4 lg:py-7\"><div cla...",
+                "<div class=\"container\"><div class=\"Footer-label lg:flex -mx-15px lg:-mx-2 lg:pt-12 lg:mt-1 lg:pb-37p..."
+            ]
+        },
+        {
+            "filter-matched": "div having class container",
+            "link-matched": "https://altex.ro/cont/",
+            "times-matched": 3,
+            "html-matched": [
+                "<div class=\"container\"><main class=\"clearfix\"><div class=\"jsx-1368468020 loading u-space-mb-30\"><div...",
+                "<div class=\"container\"><div class=\"flex flex-wrap items-start lg:items-center py-4 lg:py-7\"><div cla...",
+                "<div class=\"container\"><div class=\"Footer-label lg:flex -mx-15px lg:-mx-2 lg:pt-12 lg:mt-1 lg:pb-37p..."
+            ]
+        },
+        {
+            "filter-matched": "div having class container",
+            "link-matched": "https://altex.ro/telefoane-tablete/cpl/",
+            "times-matched": 3,
+            "html-matched": [
+                "<div class=\"container\"><main class=\"clearfix\"><div class=\"Breadcrumbs is-hidden-in-mobile-app pb-3 l...",
+                "<div class=\"container\"><div class=\"flex flex-wrap items-start lg:items-center py-4 lg:py-7\"><div cla...",
+                "<div class=\"container\"><div class=\"Footer-label lg:flex -mx-15px lg:-mx-2 lg:pt-12 lg:mt-1 lg:pb-37p..."
+            ]
+        },
+        {
+            "filter-matched": "div having class container",
+            "link-matched": "https://altex.ro/laptop-desktop-it/cpl/",
+            "times-matched": 3,
+            "html-matched": [
+                "<div class=\"container\"><main class=\"clearfix\"><div class=\"Breadcrumbs is-hidden-in-mobile-app pb-3 l...",
+                "<div class=\"container\"><div class=\"flex flex-wrap items-start lg:items-center py-4 lg:py-7\"><div cla...",
+                "<div class=\"container\"><div class=\"Footer-label lg:flex -mx-15px lg:-mx-2 lg:pt-12 lg:mt-1 lg:pb-37p..."
+            ]
+        },
+        {
+            "filter-matched": "div having class container",
+            "link-matched": "https://altex.ro/gaming-jocuri/cpl/",
+            "times-matched": 3,
+            "html-matched": [
+                "<div class=\"container\"><main class=\"clearfix\"><div class=\"Breadcrumbs is-hidden-in-mobile-app pb-3 l...",
+                "<div class=\"container\"><div class=\"flex flex-wrap items-start lg:items-center py-4 lg:py-7\"><div cla...",
+                "<div class=\"container\"><div class=\"Footer-label lg:flex -mx-15px lg:-mx-2 lg:pt-12 lg:mt-1 lg:pb-37p..."
+            ]
+        },
+        {
+            "filter-matched": "div having class container",
+            "link-matched": "https://altex.ro/tv-audio-video-foto/cpl/",
+            "times-matched": 3,
+            "html-matched": [
+                "<div class=\"container\"><main class=\"clearfix\"><div class=\"Breadcrumbs is-hidden-in-mobile-app pb-3 l...",
+                "<div class=\"container\"><div class=\"flex flex-wrap items-start lg:items-center py-4 lg:py-7\"><div cla...",
+                "<div class=\"container\"><div class=\"Footer-label lg:flex -mx-15px lg:-mx-2 lg:pt-12 lg:mt-1 lg:pb-37p..."
+            ]
+        },
+        {
+            "filter-matched": "div having class container",
+            "link-matched": "https://altex.ro/electrocasnice-mari-clima/cpl/",
+            "times-matched": 3,
+            "html-matched": [
+                "<div class=\"container\"><main class=\"clearfix\"><div class=\"Breadcrumbs is-hidden-in-mobile-app pb-3 l...",
+                "<div class=\"container\"><div class=\"flex flex-wrap items-start lg:items-center py-4 lg:py-7\"><div cla...",
+                "<div class=\"container\"><div class=\"Footer-label lg:flex -mx-15px lg:-mx-2 lg:pt-12 lg:mt-1 lg:pb-37p..."
+            ]
+        },
+        {
+            "filter-matched": "div having class container",
+            "link-matched": "https://altex.ro/electrocasnice-mici-vesela/cpl/",
+            "times-matched": 3,
+            "html-matched": [
+                "<div class=\"container\"><main class=\"clearfix\"><div class=\"Breadcrumbs is-hidden-in-mobile-app pb-3 l...",
+                "<div class=\"container\"><div class=\"flex flex-wrap items-start lg:items-center py-4 lg:py-7\"><div cla...",
+                "<div class=\"container\"><div class=\"Footer-label lg:flex -mx-15px lg:-mx-2 lg:pt-12 lg:mt-1 lg:pb-37p..."
+            ]
+        }
+    ]
+}
